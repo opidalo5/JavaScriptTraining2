@@ -7,7 +7,8 @@
     <title>My JS App</title>
 </head>
 <body>
-    <div>
+    <div id="jsLoaded" style="background-color: red; color: white; text-align: center;">Le fichier JS de l'app est pas charge</div>
+    <div id="main-Content">
          <div id="formulaire-de-saisi">
              <form action="" method="GET" name="my-form">
                  <table>
@@ -47,6 +48,10 @@
                     <td colspan="2">
                         <textarea name="description" id="form-description" cols="30" rows="10"></textarea>
                     </td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="clear"></td>
+                    <td><button type="submit">Save <span style="color:red">Note</span> </button></td>
                 </tr>
             </table>
                 <input type="text" name="form-title" id="form-title"/>
