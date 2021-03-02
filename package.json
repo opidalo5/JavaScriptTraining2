@@ -1,0 +1,23 @@
+{
+  "name": "JavaScriptTraining2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opidalo5/JavaScriptTraining2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opidalo5/JavaScriptTraining2/issues"
+  },
+  "homepage": "https://github.com/opidalo5/JavaScriptTraining2#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
