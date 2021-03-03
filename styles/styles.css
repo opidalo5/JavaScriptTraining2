@@ -1,0 +1,86 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-size: 100% 100%;
+    height: 98vh;
+}
+
+#formulaire-de-saisi {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border specs */
+    border: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+#formulaire-de-saisi table {
+    width: 100%;
+}
+
+#formulaire-de-saisi td {
+    width: 50%;
+}
+
+#formulaire-de-saisi textarea {
+    width: 98%;
+    resize: none;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700px;
+    font-weight: 700;
+    margin: 5px;
+    box-shadow: 7px 7px 10px grey;
+}
+
+.btn:hover{
+    box-shadow: 7px 7px 20px grey;
+}
+
+.btn-success {
+    background-color: rgb(30, 128, 0);
+    color: white;
+}
+
+.btn-error {
+    background-color: red;
+    color: white;
+}
+
+#post-it-liste{
+    align-content: center;
+    height: calc(98vh - 450px);
+    overflow-y: scroll;
+    overflow-x: auto;
+} 
+
+.post-it{
+    border: 1px;
+    width: 20%;
+    min-width: 150px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    background-color: #feff9c;
+    display: inline-block;
+    box-shadow: 15px 15px 20px grey;
+    padding: 7px;
+    overflow-x: auto;
+
+}
+.post-it:hover{
+    box-shadow: 7px 7px 20px grey;
+    background-color: #737505;
+}
+
+.center{
+    text-align: center;
+}
