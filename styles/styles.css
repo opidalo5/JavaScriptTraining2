@@ -74,6 +74,7 @@ body {
     box-shadow: 15px 15px 20px grey;
     padding: 7px;
     overflow-x: auto;
+    vertical-align: top;
 
 }
 .post-it:hover{
@@ -83,4 +84,15 @@ body {
 
 .center{
     text-align: center;
+}
+.container-close-img{
+    float: right;
+}
+.container-close-img > img{
+    width: 16px;
+    height: 16px;
+}
+
+.post-it-description{
+    margin-top: 20px;
 }
