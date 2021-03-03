@@ -30,7 +30,7 @@ function logFormulaire() {
         hour:formulaire['form-hour'].value,
         date:formulaire['form-date'].value,
         email:formulaire['form-email'].value,
-        email:formulaire['form-email'].value,
+        adresse:formulaire['form-adresse'].value,
         description:formulaire['form-description'].value
     }
     console.log(unPostIt);
