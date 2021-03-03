@@ -16,12 +16,23 @@ jsIsLoaded();
 
 function logFormulaire() {
     var formulaire = document.forms['my-form'];
-    console.log('title :', formulaire['form-title'].value);
-    console.log('author :', formulaire['form-author'].value);
-    console.log('hour :', formulaire['form-hour'].value);
-    console.log('date :', formulaire['form-date'].value);
-    console.log('mail :', formulaire['form-email'].value);
-    console.log('adresse :', formulaire['form-adresse'].value);
-    console.log('description :', formulaire['form-description'].value);
+//    console.log('title :', formulaire['form-title'].value);
+//    console.log('author :', formulaire['form-author'].value);
+//    console.log('hour :', formulaire['form-hour'].value);
+//    console.log('date :', formulaire['form-date'].value);
+//    console.log('mail :', formulaire['form-email'].value);
+//    console.log('adresse :', formulaire['form-adresse'].value);
+//    console.log('description :', formulaire['form-description'].value);
 
+    var unPostIt={
+        title:formulaire['form-title'].value,
+        author:formulaire['form-author'].value,
+        hour:formulaire['form-hour'].value,
+        date:formulaire['form-date'].value,
+        email:formulaire['form-email'].value,
+        email:formulaire['form-email'].value,
+        description:formulaire['form-description'].value
+    }
+    console.log(unPostIt);
+    return unPostIt;
 }
