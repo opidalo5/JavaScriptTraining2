@@ -74,8 +74,9 @@ body {
     box-shadow: 15px 15px 20px grey;
     padding: 7px;
     overflow-x: auto;
+    text-align: left;
     vertical-align: top;
-
+    height: 235px;
 }
 .post-it:hover{
     box-shadow: 7px 7px 20px grey;
@@ -95,4 +96,26 @@ body {
 
 .post-it-description{
     margin-top: 20px;
+    overflow-y: auto;
+    height:75px;
+}
+@media print{
+    body{
+        background-image: none;
+    }
+    #jsLoaded, #formulaire-de-saisie, hr{
+        display: none;
+    }
+    .post-it{
+        height: auto;
+        width:6cm;
+    }
+    #post-it-liste{
+        height :auto;
+        overflow-y: unset;
+    }
+    .post-it-description{
+        margin-top: 1cm;
+        height:auto;
+    }
 }
