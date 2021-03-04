@@ -62,18 +62,42 @@ function getFormulaire() {
  * @param {*} postitDOM @param {Document} postitDOM (document template )
  * @param {*} postitValues @param {postit} postitValues object the contains the postit to display
  */
-function makePostIt(postitDOM, postitValues) {
+/* function makePostIt(postitDOM, postitValues) {
     //use a postit model to create new
     // var postitNode = document.querySelector('.post-it').cloneNode(true);
-    var postitNode = postitDOM;
-    postitNode.querySelector('.post-it-titre').innerText = postitValues.title;
-    postitNode.querySelector('.post-it-adresse').innerText = postitValues.adresse;
-    postitNode.querySelector('.post-it-mail').innerText = postitValues.email;
-    postitNode.querySelector('.post-it-description').innerText = postitValues.description;
-    postitNode.querySelector('.post-it-author').innerText = postitValues.authorID;
-    postitNode.querySelector('.post-it-date').innerText = 'Le ' + postitValues.date + ' a ' + postitValues.hour;
+    //post break. issue retriveing document. have to build from scratch with a temp container called div then create command to go and fetch this temp content
+    var postitNode = document.createElement('div');
+    // this is the code to pick up that floating content from postitDOM
+    postitNode.innerHTML = postitDOM.firstChild.outerHTML;
 
-    document.querySelector('#post-it-liste').append(postitNode)
+    postitNode.querySelector('.post-it-titre').innerHTML = postitValues.title;
+    postitNode.querySelector('.post-it-adresse').innerHTML = postitValues.adresse;
+    postitNode.querySelector('.post-it-mail').innerHTML = postitValues.email;
+    postitNode.querySelector('.post-it-description').innerHTML = postitValues.description;
+    postitNode.querySelector('.post-it-author').innerHTML = postitValues.authorID;
+    postitNode.querySelector('.post-it-date').innerHTML = 'Le ' + postitValues.date + ' a ' + postitValues.hour;
+
+    document.querySelector('#post-it-liste').append(postitNode.firstChild); */
+function makePostIt(postitDOM, postitValues) {
+    /*/recuperation du postit model pour la creation des autres postit a remplir
+    //clone permet d'obtenir un double non lié a l'element d'origine
+    var postitNode = document.querySelector('.post-it').cloneNode(true);*/
+    var postitNode = postitDOM.firstChild;
+    var postitNode = document.createElement('div');
+    //remplissage du contenu de la balise div vide par tout le contenu de la premiere balise de postitDOM
+    postitNode.innerHTML = postitDOM.firstChild.outerHTML;
+    //composition d'un post it rempli avec les valeurs recus en argument d'entree de fonction
+    postitNode.querySelector('.post-it-titre').innerHTML = postitValues.title;
+    postitNode.querySelector('.post-it-adresse').innerHTML = postitValues.adresse;
+    postitNode.querySelector('.post-it-mail').innerHTML = postitValues.email;
+    postitNode.querySelector('.post-it-date').innerHTML = 'Le ' + postitValues.date + ' a ' + postitValues.hour;
+    postitNode.querySelector('.post-it-date').innerHTML = 'Le <b>' + postitValues.date + '</b> a ' + postitValues.hour;
+    postitNode.querySelector('.post-it-description').innerHTML = postitValues.description;
+    postitNode.querySelector('.post-it-author').innerHTML = postitValues.authorID;
+
+    //ajout à la fin de la liste du document de template postit rempli 
+    document.querySelector('#post-it-liste').append(postitNode);
+    document.querySelector('#post-it-liste').append(postitNode.firstChild);
 }
 function onformsubmit(evt) {
     // arret de l'execution par default de la soummission (rechargement de page)
