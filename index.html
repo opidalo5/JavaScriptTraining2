@@ -18,7 +18,9 @@
                 <table>
                     <tr>
                         <td><label for="form-title">Form Title</label></td>
-                        <td><input type="text" name="form-title" id="form-title" /></td>
+                        <!--adding a pattern matching regex-->
+                        <td><input pattern="[A-Z][a-zA-Zâêîôûëïüçàèùé -]{1,}" type="text" name="form-title"
+                                id="form-title" /></td>
                     </tr>
                     <tr>
                         <td><label for="form-author">Author</label></td>
@@ -34,7 +36,8 @@
                     </tr>
                     <tr>
                         <td><label for="form-hour">Date and Time</label></td>
-                        <td>Le <input type="date" id="form-date" name="form-date"> a <input type="time" name="form-hour" id="form-hour" />
+                        <td>Le <input type="date" id="form-date" name="form-date"> a <input type="time" name="form-hour"
+                                id="form-hour" />
                         </td>
                     </tr>
                     <tr>
@@ -43,6 +46,7 @@
                     </tr>
                     <tr>
                         <td><label for="form-adresse">adresse</label></td>
+                        <!-- adding a rule to validate input */ -->
                         <td><input type="text" name="form-adresse" id="form-adresse" /></td>
                     </tr>
                     <tr>
@@ -63,15 +67,7 @@
         </div>
         <hr />
         <div id="post-it-liste">
-            <div class="post-it">
-                <div class="container-close-img"><img src="images/iconfinder_ic_close_48px_352270.png" alt="close"></div>
-                <h2 class="post-it-titre">Title of the note</h2>
-                <div class="center post-it-date">03/03/2021 at 00:00</div>
-                <div class="center post-it-author">dipo</div>
-                <div class="center post-it-mail">dipocoker@hotmail.com</div>
-                <div class="center post-it-adresse">19 have you got time street 87465 </div>
-                <div class="center post-it-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam commodi incidunt aut animi tenetur voluptas et, quas atque ratione deserunt vero a iure. Dolorum cum sequi dicta deleniti neque aspernatur.</div>
-            </div>
+
 
 
             <!-- <class class="post-it">a second post it</class>            <div class="post-it">a third post it</div>
